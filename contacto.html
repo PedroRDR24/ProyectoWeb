@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Registro</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Formulario de Contacto</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="historia.html">Historia</a></li>
+            <li><a href="tecnologias.html">Tecnologías</a></li>
+            <li><a href="recursos.html">Recursos</a></li>
+            <li><a href="contacto.html" class="active">Contacto</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Envíanos tus Dudas</h2>
+        <form id="formContacto" novalidate>
+            <!-- Control 1: Input text -->
+            <div class="form-group">
+                <label for="nombre">Nombre Completo:</label>
+                <input type="text" id="nombre" name="nombre">
+                <span id="errorNombre" class="error-msg"></span>
+            </div>
+
+            <!-- Control 2: Input email -->
+            <div class="form-group">
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo">
+                <span id="errorCorreo" class="error-msg"></span>
+            </div>
+
+            <!-- Control 3: Select -->
+            <div class="form-group">
+                <label for="motivo">Motivo de Contacto:</label>
+                <select id="motivo" name="motivo">
+                    <option value="">-- Selecciona una opción --</option>
+                    <option value="duda">Duda Técnica</option>
+                    <option value="sugerencia">Sugerencia</option>
+                    <option value="colaboracion">Colaboración</option>
+                </select>
+                <span id="errorMotivo" class="error-msg"></span>
+            </div>
+
+            <!-- Control 4: Textarea -->
+            <div class="form-group">
+                <label for="mensaje">Mensaje o Consulta:</label>
+                <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+                <span id="errorMensaje" class="error-msg"></span>
+            </div>
+
+            <!-- Control 5: Checkbox -->
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" id="terminos" name="terminos"> He leído y acepto los términos de privacidad
+                </label>
+                <span id="errorTerminos" class="error-msg"></span>
+            </div>
+
+            <button type="submit">Enviar Información</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2026 - Proyecto de Tecnologías Web</p>
+    </footer>
+
+    <script src="js/validacion.js"></script>
+</body>
+</html>
